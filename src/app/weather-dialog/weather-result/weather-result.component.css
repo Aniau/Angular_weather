@@ -1,0 +1,30 @@
+#wather_result
+{
+    color: white;
+}
+
+#card-info
+{
+    margin: 5% auto auto auto;
+    background-color: #47505c;
+    width: 50%;
+    height: 70%;
+}
+
+#title
+{
+    margin: 0 auto 0 auto;
+    font-weight: bold;
+}
+
+#temp
+{
+    margin-top: 5%;
+}
+
+/* 
+::ng-deep .snack-error
+{
+    background-color: #E69BA3;
+    color: black;
+} */

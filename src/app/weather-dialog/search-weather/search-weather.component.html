@@ -1,0 +1,9 @@
+<div id="search-city-container">
+    <mat-form-field id="search-city" appearance="fill"> 
+        <!-- <mat-label>Search city...</mat-label> -->
+        <input id="input" matInput autocomplete="false" [(ngModel)]="city">
+        <button mat-mini-fab (click)="searchCity(city)" id="button">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+</div>

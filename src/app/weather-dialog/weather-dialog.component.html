@@ -1,0 +1,4 @@
+<div id="flexbox">
+    <app-search-weather class="flex-item" (emitCity)="searchWeather($event)"></app-search-weather>
+    <app-weather-result class="flex-item" [cityInput]="outputCity"></app-weather-result>
+</div>
