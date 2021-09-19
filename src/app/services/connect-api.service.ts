@@ -13,9 +13,9 @@ export class ConnectApiService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(city: string): Observable<apiResponse[]>
+  getWeather(city: string): Observable<apiResponse>
   {
-    return this.http.get<apiResponse[]>(this.apiLink + city + this.params);
+    return this.http.get<apiResponse>(this.apiLink + city + this.params);
   }
 
   // private handleError(error: HttpErrorResponse): Observable<never>

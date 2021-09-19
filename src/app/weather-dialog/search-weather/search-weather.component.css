@@ -11,11 +11,14 @@
     justify-content: center;
     align-items: center;
     color: white;
+    /* width: 150%; */
 }
 
 #input
 {
     background-color: #47505c;
+    width: 70%;
+    margin-right: 5%;
 }
 
 #button

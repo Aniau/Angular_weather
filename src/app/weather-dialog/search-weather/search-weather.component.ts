@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { ConnectApiService } from 'src/app/services/connect-api.service';
 
 @Component({
@@ -10,6 +11,8 @@ export class SearchWeatherComponent implements OnInit
 {
   @Output() emitCity = new EventEmitter<string>();
   public city = '';
+  // cityForm = new FormControl();
+  // [formControl]="emailFormControl"
   constructor(private apiConnect: ConnectApiService)
   {}
 
