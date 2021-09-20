@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { apiResponse } from '../model/apiResponse';
+import { sunResult } from '../model/sunRiseSet';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,10 @@ export class ConnectApiService {
     return this.http.get<apiResponse>(this.apiLink + city + this.params);
   }
 
+  getSun(lat: number, lng: number): Observable<sunResult>
+  {
+    return this.http.get<sunResult>('https://api.sunrise-sunset.org/json?lat=' + lat + '&lng=' + lng);
+  }
   // private handleError(error: HttpErrorResponse): Observable<never>
   // {
   //   return throwError(`error: ${error}`); 

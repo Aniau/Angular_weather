@@ -1,13 +1,13 @@
-<div id="wather_result" *ngIf="name && apiStatus != 404">
+<div id="wather_result" *ngIf="nameCity && apiStatus != 404">
     <mat-card id="card-info">
-        <mat-card-title id="title">Weather for city {{ name }}, {{ country }}</mat-card-title>
-        <mat-card-subtitle id="temp">Temperatura: {{ temp }}</mat-card-subtitle>
+        <mat-card-title id="title">Weather for city {{ nameCity }}, {{ country }} - {{ currentDate | date: 'YYY-MM-dd HH:mm:ss'}}</mat-card-title>
+        <mat-card-subtitle id="temp">Temperature: {{ temp }}</mat-card-subtitle>
         <mat-card-subtitle id="description">Description: {{ description }}</mat-card-subtitle>
         <mat-card-subtitle id="wind">Wind: {{ wind }}</mat-card-subtitle>
         <mat-card-subtitle id="pressure">Pressure: {{ pressure }} hPa</mat-card-subtitle>
         <mat-card-subtitle id="humidity">Humidity: {{ humidity }} %</mat-card-subtitle>
-        <mat-card-subtitle id="sunrise">Sunrise: {{ sunrise | date:'HH:mm:ss zzzz': timezone }}</mat-card-subtitle>
-        <mat-card-subtitle id="sunset">Sunset: {{ sunset-60 | date:'HH:mm:ss zzzz': timezone }}</mat-card-subtitle>
+        <mat-card-subtitle id="sunrise">Sunrise: {{ sunrise | date:'hh:mm:ss' }}</mat-card-subtitle>
+        <mat-card-subtitle id="sunset">Sunset: {{ sunset | date:'HH:mm:ss' }}</mat-card-subtitle>
         <mat-card-subtitle id="timezone">Timezone: {{ timezone }}</mat-card-subtitle>
     </mat-card>
 </div>
